@@ -1,2 +1,37 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<html>
+  <head>
+    <link rel="stylesheet" media="all" >
+    <title>Bookers</title>
+  </head>
+  
+  <body>
+  <h1>Books</h1>
+
+<!--titleとbody-->
+  <list>
+  <th>Title</th>
+  <th>Body</th>
+  <td colspan="3"></td>
+  </list>
+
+  <listbody>
+    <tr>
+      <tb>test</tb>
+        <td>test</td>
+          <td>Show</td>
+          <td>Edit</td>
+          <td>Destroy</td>
+    </tr>
+  </listbody>
+
+  <h2>New Book</h2>
+    <div class="newtitle">
+      <label for="book-title">Title</label>
+      <textarea class="book-title" type="text" name="book[title]" id="book-title"></textarea>
+    </div>
+    <div class="newbody">
+      <label for="book-body">Body</label>
+      <textarea class="book-body" type="text" name="book[body" id="book-body"></textarea>
+    </div>
+  </body>
+</html>
