@@ -30,18 +30,19 @@
 
   <h2>New Book</h2>
   <div class="form">
-    <%= form_with model: @Book do |f| %>
-    <div class="newtitle">
-    <%= f.text_area :body %>
+    <!--form_with作成-->
+  <div class="newtitle">
+    <%= form_with model: Book.new do |f| %>
       <label for="book-title">Title</label>
-      <textarea class="book-title" type="text" name="book[title]" id="book-title"></textarea>
     </div>
+    <%= f.text_field :title %>
     <div class="newbody">
       <label for="book-body">Body</label>
-      <textarea class="book-body" type="text" name="book[body" id="book-body"></textarea>
     </div>
+    <%= f.text_area :body %>
     <div class="actions">
-      <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
+  <%= f.submit 'Create Book' %>
+<% end %>
     </div>
   </form>
   </body>
