@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+/*見出し*/
 
+h1
+{
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
 
-
+/*投稿一覧*/
 body
 {
   background-color: #fff;
@@ -17,6 +24,12 @@ body
   margin:33px;
 }
 
+tbody
+{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
 
 table
 {
@@ -28,13 +41,46 @@ table
   border-color: gray;
 }
 
-form
+list
 {
-  display: block;
-  margin-top: 0em;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+a
+{
+  text-decoration: underline;
+}
+
+td
+{
+  padding: 5px;
+  padding-right: 10px;
 }
 
 
+/*投稿フォーム*/
+
+.form
+{
+  display: block;
+}
+
+label
+{
+  display: block;
+}
+
+.newtitle
+{
+  margin-bottom: 10px;
+}
+
+.newbody
+{
+  margin-bottom: 10px;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

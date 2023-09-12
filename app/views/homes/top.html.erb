@@ -19,17 +19,20 @@
 
   <listbody>
     <tr>
-        <td>test</td>
-        <td>test</td>
-          <td>Show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
+        <td>テストテストテスト</td>
+        <td>文章文章文章文章文章文章文章文章文章文章文章文章</td>
+          <td><a>Show</a></td>
+          <td><a>Edit</a></td>
+          <td><a>Destroy</a></td>
     </tr>
   </listbody>
 </table>
 
   <h2>New Book</h2>
+  <div class="form">
+    <%= form_with model: @Book do |f| %>
     <div class="newtitle">
+    <%= f.text_area :body %>
       <label for="book-title">Title</label>
       <textarea class="book-title" type="text" name="book[title]" id="book-title"></textarea>
     </div>
@@ -40,5 +43,6 @@
     <div class="actions">
       <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
     </div>
+  </form>
   </body>
 </html>
