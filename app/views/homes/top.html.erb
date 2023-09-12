@@ -10,14 +10,16 @@
 <!--titleとbody-->
 <table>
   <list>
+  <tr>
   <th>Title</th>
   <th>Body</th>
   <td colspan="3"></td>
+  </tr>
   </list>
 
   <listbody>
     <tr>
-      <tb>test</tb>
+        <td>test</td>
         <td>test</td>
           <td>Show</td>
           <td>Edit</td>
@@ -34,6 +36,9 @@
     <div class="newbody">
       <label for="book-body">Body</label>
       <textarea class="book-body" type="text" name="book[body" id="book-body"></textarea>
+    </div>
+    <div class="actions">
+      <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
     </div>
   </body>
 </html>
