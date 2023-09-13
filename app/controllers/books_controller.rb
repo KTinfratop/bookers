@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def new
       @book = Book.new
+      @books = Book.all
   end
 
   def create
@@ -9,7 +10,7 @@ class BooksController < ApplicationController
     #2データベースに保存saveメソッド
     book.save
     #3リダイレクト
-    redirect_to '/show'
+    redirect_to '/books'
   end
   
   def index
@@ -17,6 +18,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
   def edit

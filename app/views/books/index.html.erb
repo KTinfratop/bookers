@@ -2,6 +2,12 @@
 
 <% @books.each do |book| %>
   <p>title</p>
-  <span><%= book.title %></span>
+  <span>
+    <%= link_to book.title, "/books/#{book.id}" %>
+  </span>
+  
+  <td><a>Show</a></td>
+  <td><a>Edit</a></td>
+  <td><a>Destroy</a></td>
   
 <% end %>
