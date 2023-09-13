@@ -31,13 +31,13 @@
     </div>
 
     <td>
-      <a>Show</a>
+      <%= link_to "Show", book_path(book) %>
     </td>
     <div>
-      <a>Edit</a>
+      <%= link_to "Edit", edit_book_path(book) %>
     </td>
     <td>
-      <a>Destroy</a>
+      <%= link_to "Destroy", destroy_book_path(book), method: :delete, "data-confirm" => "本当に削除しますか？" %>
     </td>
     
   <% end %>
@@ -47,7 +47,7 @@
 
 <h2>New Book</h2>
   <div class="form">
-    <%= form_with(model: Book.new) do |f| %>
+    <%= form_with model: @book, url: '/:id', method: :post do |f| %>
       <div class="newtitle">
         <%= f.label :title %>
         <%= f.text_field :title %>
