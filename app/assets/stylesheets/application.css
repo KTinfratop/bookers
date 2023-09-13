@@ -24,28 +24,33 @@ body
   margin:33px;
 }
 
-tbody
+.tbody
 {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-table
+.table
 {
-  display: table;
   border-collapse: separate;
-  box-sizing: border-box;
   text-indent: initial;
   border-spacing: 2px;
-  border-color: gray;
 }
 
-list
+th
 {
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
+  display: table-cell;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.list
+{
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-indent: initial;
 }
 
 a
@@ -80,6 +85,20 @@ label
 .newbody
 {
   margin-bottom: 10px;
+}
+
+
+.edit_submit
+{
+  display: block;
+  margin-top: 10px;
+}
+
+.show
+{
+  display: block;
+  margin: auto;
+  padding: 10px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

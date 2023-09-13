@@ -1,13 +1,67 @@
-<h1>Books</h1>
+<html>
 
-<% @books.each do |book| %>
-  <p>title</p>
-  <span>
-    <%= link_to book.title, "/books/#{book.id}" %>
-  </span>
+<head>
+  <h1>Books</h1>
+</head>
+
+<body>
+  <div class="table">
+  <div class="list">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <td colspan="3"></td>
+      </tr>
+    </thead>
+  </div>
   
-  <td><a>Show</a></td>
-  <td><a>Edit</a></td>
-  <td><a>Destroy</a></td>
+    <div class="tbody">
+    <% @books.each do |book| %>
+      <div class="title">
+        <span>
+          <%= book.title %>
+        </span>
+    </div>
+
+    <div class="tbody">
+      <span>
+        <%= book.body %>
+      </span>
+    </div>
+
+    <td>
+      <a>Show</a>
+    </td>
+    <div>
+      <a>Edit</a>
+    </td>
+    <td>
+      <a>Destroy</a>
+    </td>
+    
+  <% end %>
+  </div>
+</div>
+</div>
+
+<h2>New Book</h2>
+  <div class="form">
+    <%= form_with(model: Book.new) do |f| %>
+      <div class="newtitle">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
   
-<% end %>
+      <div class="newbody">
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit 'Create Book' %>
+      </div>
+    <% end %>
+  </div>
+  </body>
+</html>

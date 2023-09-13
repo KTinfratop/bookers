@@ -1,7 +1,16 @@
-<h1>Books#show</h1>
+<div class= "show">
+  
+  <div class= "show_title">
+    <h4>Title:</h4>
+    <p><%= @book.title %></p>
+  </div>
 
-<h2>Title</h2>
-<p><%= @book.title %></p>
+  <div class= "show_body">
+    <h4>Body:</h4>
+    <p><%= @book.body %></p>
+  </div>
+  
+</div>
 
-<h2>Body</h2>
-<p><%= @book.body %></p>
+<%= link_to "Edit", edit_list_path(@book.id) %>
+<%= link_to "Back", books_path(@book.id) %>
