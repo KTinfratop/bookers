@@ -9,7 +9,7 @@ class BooksController < ApplicationController
     #2データベースに保存saveメソッド
     book.save
     #3リダイレクト
-    redirect_to 'books/index'
+    redirect_to book_path(book.id)
   end
   
   def index
@@ -33,7 +33,7 @@ class BooksController < ApplicationController
   def destroy
     book = Book.find(params[:id])
     book.destroy
-    redirect_to book_path(book.id)
+    redirect_to index_book_path(book.id)
   end
   
   private

@@ -36,6 +36,8 @@ body
   border-collapse: separate;
   text-indent: initial;
   border-spacing: 2px;
+  vertical-align: inherit;
+  font-weight: bold;
 }
 
 th
@@ -43,14 +45,6 @@ th
   display: table-cell;
   text-indent: initial;
   border-spacing: 2px;
-}
-
-.list
-{
-  display: table-cell;
-  vertical-align: inherit;
-  font-weight: bold;
-  text-indent: initial;
 }
 
 a

@@ -6,7 +6,6 @@
 
 <body>
   <div class="table">
-  <div class="list">
     <thead>
       <tr>
         <th>Title</th>
@@ -31,23 +30,22 @@
     </div>
 
     <td>
-      <%= link_to "Show", book_path(book) %>
+      <%= link_to "Show", book_path(book.id) %>
     </td>
     <div>
-      <%= link_to "Edit", edit_book_path(book) %>
+      <%= link_to "Edit", edit_book_path(book.id) %>
     </td>
     <td>
-      <%= link_to "Destroy", destroy_book_path(book), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+      <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
     </td>
     
   <% end %>
   </div>
 </div>
-</div>
 
 <h2>New Book</h2>
   <div class="form">
-    <%= form_with model: @book, url: '/:id', method: :post do |f| %>
+    <%= form_with model: @book, url: "books" do |f| %>
       <div class="newtitle">
         <%= f.label :title %>
         <%= f.text_field :title %>
