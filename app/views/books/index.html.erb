@@ -45,7 +45,7 @@
 
 <h2>New Book</h2>
   <div class="form">
-    <%= form_with model: @book do |f| %>
+    <%= form_with model: @book,url: '/books', method: :post do |f| %>
       <div class="newtitle">
         <%= f.label :title %>
         <%= f.text_field :title %>
