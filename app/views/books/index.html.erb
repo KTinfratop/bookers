@@ -42,6 +42,15 @@
   </table>
 
 <h2>New Book</h2>
+  <!--エラーメッセージの設定-->
+  <% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
   <div class="form">
     <%= form_with model: @book,url: '/books', method: :post do |f| %>
       <div class="newtitle">
