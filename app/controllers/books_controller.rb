@@ -7,9 +7,13 @@ class BooksController < ApplicationController
     #1データ受け取り
     book = Book.new(book_params)
     #2データベースに保存saveメソッド
-    book.save
-    #3リダイレクト
-    redirect_to book_path(book.id)
+    if book.save
+    #3フラッシュメッセージとリダイレクト
+       flash[:notice] = "Book was successfully created."
+       redirect_to book_path(book.id)
+    else
+       render :new
+    end
   end
   
   def index
@@ -27,8 +31,12 @@ class BooksController < ApplicationController
   
   def update
     book = Book.find(params[:id])
-    book.update(book_params)
-    redirect_to book_path(book.id)
+    if  book.update(book_params)
+        flash[:notice] = "Book was successfully updated."
+        redirect_to book_path(book.id)
+    else
+        render :new
+    end
   end
   
   def destroy

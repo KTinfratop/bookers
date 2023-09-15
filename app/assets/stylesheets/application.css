@@ -4,16 +4,7 @@
   box-sizing: border-box;
 }
 
-/*見出し*/
 
-h1
-{
-  display: block;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-/*投稿一覧*/
 body
 {
   background-color: #fff;
@@ -24,39 +15,76 @@ body
   margin:33px;
 }
 
-.tbody
+
+h1
+{
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+a
+{
+  color: #666;
+  text-decoration: underline;
+}
+
+p
+{
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 13px;
+  font-height:18px;
+  margin:33px;
+}
+
+
+table
+{
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+thead
+{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tbody
 {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-.table
+tr
 {
-  border-collapse: separate;
-  text-indent: initial;
-  border-spacing: 2px;
+  display: table-row;
   vertical-align: inherit;
-  font-weight: bold;
+  border-color: inherit;
 }
 
 th
 {
-  display: table-cell;
-  text-indent: initial;
-  border-spacing: 2px;
-}
-
-a
-{
-  text-decoration: underline;
+  margin-bottom: 5px;
 }
 
 td
 {
-  padding: 5px;
-  padding-right: 10px;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 13px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 18px;
+  margin: 33px;
 }
+
 
 
 /*投稿フォーム*/
@@ -93,6 +121,13 @@ label
   display: block;
   margin: auto;
   padding: 10px;
+}
+
+
+/*show*/
+.flash
+{
+  color: green;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

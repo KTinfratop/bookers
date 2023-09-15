@@ -5,7 +5,7 @@
 </head>
 
 <body>
-  <div class="table">
+  <table>
     <thead>
       <tr>
         <th>Title</th>
@@ -13,35 +13,33 @@
         <td colspan="3"></td>
       </tr>
     </thead>
-  </div>
   
-    <div class="tbody">
+  <tbody>
     <% @books.each do |book| %>
-      <div class="title">
-        <span>
-          <%= book.title %>
-        </span>
-    </div>
-
-    <div class="tbody">
-      <span>
-        <%= book.body %>
-      </span>
-    </div>
-
+    <tr>
+    <td>
+      <%= book.title %>
+    </td>
+    
+    <td>
+      <%= book.body %>
+    </td>
+    
     <td>
       <%= link_to "Show", book_path(book.id) %>
     </td>
-    <div>
+    
+    <td>
       <%= link_to "Edit", edit_book_path(book.id) %>
     </td>
-    <td>
-      <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
-    </td>
     
-  <% end %>
-  </div>
-</div>
+    <td>
+      <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+    </td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
 
 <h2>New Book</h2>
   <div class="form">
