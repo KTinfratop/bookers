@@ -43,6 +43,7 @@
 
 <h2>New Book</h2>
   <!--エラーメッセージの設定-->
+  <div id="error">
   <% if @book.errors.any? %>
   <%= @book.errors.count %>errors prohibited this book from being saved:
   <ul>
@@ -51,6 +52,8 @@
     <% end %>
   </ul>
   <% end %>
+  </div>
+  
   <div class="form">
     <%= form_with model: @book,url: '/books', method: :post do |f| %>
       <div class="newtitle">
